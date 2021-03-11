@@ -21,6 +21,6 @@ COPY --from=builder /etc/passwd /etc/passwd
 # copy the static executable
 COPY --from=builder /go/bin/example /example
 # use an unprivileged user.
-USER root
+USER elf
 # run app
 ENTRYPOINT ["./example"]
